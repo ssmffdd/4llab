@@ -14,9 +14,9 @@ void insert_beginning(Node** head, double data);
 void insert_end(Node** head, double data);
 void delete_beginning(Node** head);
 void delete_end(Node** head);
-void display_list(Node* head);  // Изменен прототип
+void display_list(Node* head);  
 void delete_list(Node** head);
-void search_element(Node* head, double value);  // Изменен прототип
+void search_element(Node* head, double value);  
 void print_menu(int current_option);
 void clear_screen();
 double valid_input(const char* output);
@@ -124,7 +124,7 @@ int main() {
                         break;
                     }
                     printf("Содержимое списка:\n");
-                    display_list(head);  // Исправлен вызов
+                    display_list(head);  
                     break;
                     
                 case 6:
@@ -134,7 +134,7 @@ int main() {
                     }
                     delete_list(&head);
                     printf("Список полностью удален!\n");
-                    is_init = 0;  // Сброс флага после удаления списка
+                    is_init = 0;  
                     break;
 
                 case 7:
@@ -143,7 +143,7 @@ int main() {
                         break;
                     }
                     value = valid_input("Введите значение для поиска: ");
-                    search_element(head, value);  // Исправлен вызов
+                    search_element(head, value);  
                     break;
                     
                 case 8:
@@ -193,7 +193,7 @@ double valid_input(const char* output) {
 }
 
 void init_node(Node** head) {
-    delete_list(head);  // Исправлен вызов
+    delete_list(head);  
     *head = NULL;
 }
 
@@ -259,7 +259,7 @@ void delete_end(Node** head) {
     }
 }
 
-void display_list(Node* head) {  // Исправленный параметр
+void display_list(Node* head) {  
     if (head == NULL) {
         printf("Список пуст!\n");
         return;
@@ -287,7 +287,7 @@ void delete_list(Node** head) {
     *head = NULL;
 }
 
-void search_element(Node* head, double value) {  // Исправленный параметр
+void search_element(Node* head, double value) {  
     if (head == NULL) {
         printf("Список пуст!\n");
         return;
